@@ -1,0 +1,9 @@
+Update 1.  With plans to use a DS1307 RTC I have now been able to successfully set the correct time and be able to pull time and display it on the screen of the LCD.
+
+The LCD only has 4 pins in use. +5, Gnd, +5(backlight)from pin 53 at the moment and pin 14 used on the Mega for serial communication sent to the display
+
+Commands are sent to the LCD via the Serial.Write(); function with the number in the perenthesis being the desired command.
+
+The current issue I  am having is sending a command with extra values to the display.  For instance the command to control
+contrast is Serial.write(17) which must somehow be followed by the value between 0 and 100 or to change the location of the cursor on the screen
+to /021/010/001
