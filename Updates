@@ -7,3 +7,11 @@ Commands are sent to the LCD via the Serial.Write(); function with the number in
 The current issue I  am having is sending a command with extra values to the display.  For instance the command to control
 contrast is Serial.write(17) which must somehow be followed by the value between 0 and 100 or to change the location of the cursor on the screen
 to /021/010/001
+
+Update 2. Figured out the issue with sending commands to the LCD, by using a function it is pretty simple, thanks to the support team over at CrystalFontz for that info.
+Also, my parts finally came in from China(Singapore) so now I have mt temp/humidity sensor, keypad and tri-color lcd's.
+Now to get to work.
+
+I have the RTC working properly now and the system will poll it whenever it restarts otherwise it doesn't apply power to the pin because the RTC already has a battery so I see no need in constantly applying power.
+
+10/19/2013
